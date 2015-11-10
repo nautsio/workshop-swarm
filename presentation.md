@@ -81,3 +81,5 @@ docker -H tcp://<manager_ip:manager_port> info
 
 !SLIDE
 # Workshop Setup
+
+<img src="images/workshopsetup.png">
