@@ -1,9 +1,28 @@
 # What is Swarm
+- Native clustering for Docker
+- Compatible with Docker remote API
 
-sadfsadadsjj:w
+<img src="images/swarmlogo.png">
 
 !SUB
-# Architecture overview
+# Swarm overview
+
+<img src="images/swarmoverview.png">
+
+!SUB
+# Swarm possibilities
+- Built-in scheduler with filters
+  - Node tags
+  - Affinity
+  - Strategies
+- Pluggable node discovery
+- Pluggable schedulers
+
+!SUB
+# Swarm creation
+- Create a unique cluster_id token
+- Create Swarm nodes
+- Create a Swarm manager
 
 !SLIDE
 XXX
