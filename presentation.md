@@ -1,3 +1,39 @@
+# What is Compose
+- Defining and running multi-container applications
+- Using a Compose file (docker-compose.yml)
+
+<img src="images/composelogo.png">
+
+!SUB
+# Compose overview
+
+<img src="images/composeoverview.png">
+
+!SUB
+# Compose capabilities
+- Multiple isolated environments on single host
+- Preserve volume data when containers are created
+- Only recreate containers that have changed
+- Using variables and extending Compose files
+
+!SUB
+# Compose file
+- docker-compose.yml
+- Run it using ```docker-compose up```
+
+```
+web:
+  build: .
+  ports:
+   - "5000:5000"
+  volumes:
+   - .:/code
+  links:
+   - redis
+redis:
+  image: redis
+```
+!SLIDE
 # What is Swarm
 - Native clustering for Docker
 - Compatible with Docker remote API
@@ -36,43 +72,6 @@ docker run -d swarm join --addr=<node_ip:2375> token://<cluster_id>
 ```
 docker run -d -p <manager_port>:2375 swarm manage token://<cluster_id>
 docker -H tcp://<manager_ip:manager_port> info
-```
-
-!SLIDE
-# What is Compose
-- Defining and running multi-container applications
-- Using a Compose file (docker-compose.yml)
-
-<img src="images/composelogo.png">
-
-!SUB
-# Compose overview
-
-<img src="images/composeoverview.png">
-
-!SUB
-# Compose capabilities
-- Multiple isolated environments on single host
-- Preserve volume data when containers are created
-- Only recreate containers that have changed
-- Using variables and extending Compose files
-
-!SUB
-# Compose file
-- docker-compose.yml
-- Run it using ```docker-compose up```
-
-```
-web:
-  build: .
-  ports:
-   - "5000:5000"
-  volumes:
-   - .:/code
-  links:
-   - redis
-redis:
-  image: redis
 ```
 
 !SLIDE

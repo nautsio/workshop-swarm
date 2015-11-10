@@ -1,5 +1,5 @@
 <img src="http://cdn.nauts.io/img/cargonaut.svg" class="header">
-# Workshop Swarm
+# Scaling Docker with Swarm and Compose
 
 <br>[nauts.io/workshop-swarm](http://nauts.io/workshop-swarm)
 
