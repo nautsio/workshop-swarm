@@ -21,8 +21,22 @@
 !SUB
 # Swarm creation
 - Create a unique cluster_id token
+
+```
+$ docker run --rm swarm create
+6856663cdefdec325839a4b7e1de38e8
+```
 - Create Swarm nodes
+
+```
+docker run -d swarm join --addr=<node_ip:2375> token://<cluster_id>
+```
 - Create a Swarm manager
+
+```
+docker run -d -p <manager_port>:2375 swarm manage token://<cluster_id>
+docker -H tcp://<manager_ip:manager_port> info
+```
 
 !SLIDE
 # What is Compose
@@ -45,6 +59,7 @@
 
 !SUB
 # Compose file
+- docker-compose.yml
 - Run it using ```docker-compose up```
 
 ```
