@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
       end
 
       # Set up networking.
-      ip = "172.17.8.#{i+100}"
+      ip = "172.16.8.#{i+100}"
       config.vm.network :private_network, ip: ip
 
       # Provision machine.
