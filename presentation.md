@@ -83,3 +83,40 @@ docker -H tcp://<manager_ip:manager_port> info
 # Workshop Setup
 
 <img src="images/workshopsetup.png">
+
+!SUB
+# Assignment
+Create a working Swarm Cluster of three nodes
+
+!SUB
+# Challenge 1: Step 1
+Create a staging and production environment, partition your Docker nodes to have one staging and one production environment
+
+<img src="images/workshopsetup-stagingproduction.png">
+
+[see: filters and constraints](https://docs.docker.com/v1.5/swarm/scheduler/filter)
+
+!SUB
+# Challenge 1: Step 2
+Create a sample deployment using Docker compose
+image: ehazlett/docker-demo
+
+!SUB
+# Challenge 1: Step 3
+Extend the service in such a way that you have a
+- staging.yml
+- production.yml
+
+Now deploy the app to both environments
+
+[see: extending services](https://docs.docker.com/compose/extends)
+
+!SUB
+# [ Challenge 2 ]
+Use an alternate backend for Swarm, for example Consul.
+
+!SUB
+# [ Challenge 3 ]
+Secure your Swarm Cluster
+
+Enable TLS on all Docker Daemons and your Swarm Manager
