@@ -85,12 +85,39 @@ docker -H tcp://<manager_ip:manager_port> info
 <img src="images/workshopsetup.png">
 
 !SUB
+# Prerequisites
+- Vagrant
+- Virtualbox
+
+!SUB
+# Workshop materials
+```
+vagrant up
+```
+will provide you a lab environment of 3 nodes which are Docker enabled
+```
+vagrant ssh ddd-0[1-3]
+```
+
+!SUB
 # Assignment
 Create a working Swarm Cluster of three nodes
 
 !SUB
+# Verify
+
+Check if all you cluster nodes are registered
+```
+docker -H <swarm-ip:port> info
+```
+
+!SUB
+# Challenge 1
+Define a staging and production environment. Use extended services to target an application to both of these environments. Make sure that the running application knows on which environment it is deployed.
+
+!SUB
 # Challenge 1: Step 1
-Create a staging and production environment, partition your Docker nodes to have one staging and one production environment
+Partition your Docker nodes to have one staging and one production environment
 
 <img src="images/workshopsetup-stagingproduction.png">
 
