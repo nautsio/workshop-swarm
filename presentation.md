@@ -117,6 +117,24 @@ Create a working Swarm Cluster of three nodes
 Check if all you cluster nodes are registered
 ```
 docker -H <swarm-ip:port> info
+...
+Nodes: 3
+ ddd-01: 172.19.8.101:2375
+  └ Containers: 3
+  └ Reserved CPUs: 0 / 1
+  └ Reserved Memory: 0 B / 1.026 GiB
+  └ Labels: executiondriver=native-0.2, kernelversion=3.16.0-4-amd64, operatingsystem=Debian GNU/Linux 8 (jessie), storagedriver=aufs
+ ddd-02: 172.19.8.102:2375
+  └ Containers: 6
+  └ Reserved CPUs: 0 / 1
+  └ Reserved Memory: 0 B / 1.026 GiB
+  └ Labels: executiondriver=native-0.2, kernelversion=3.16.0-4-amd64, operatingsystem=Debian GNU/Linux 8 (jessie), storagedriver=aufs
+ ddd-03: 172.19.8.103:2375
+  └ Containers: 2
+  └ Reserved CPUs: 0 / 1
+  └ Reserved Memory: 0 B / 1.026 GiB
+  └ Labels: executiondriver=native-0.2, kernelversion=3.16.0-4-amd64, operatingsystem=Debian GNU/Linux 8 (jessie), storagedriver=aufs
+...
 ```
 
 !SUB
