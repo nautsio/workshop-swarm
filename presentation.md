@@ -165,11 +165,11 @@ Now deploy the app to both environments
 [see: extending services](https://docs.docker.com/compose/extends)
 
 !SLIDE
-# [ Challenge 2 ]
+# Challenge 2
 Use an alternate backend for Swarm, for example Consul.
 
 !SLIDE
-# [ Challenge 3 ]
+# Challenge 3
 Secure your Swarm Cluster
 
 Enable TLS on all Docker Daemons and your Swarm Manager
