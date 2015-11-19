@@ -21,11 +21,11 @@ Vagrant.configure("2") do |config|
         vb.gui = $vm_gui
         vb.memory = $vm_memory
         vb.cpus = $vm_cpus
+        vb.customize ['modifyvm', :id, '--nictype1', 'virtio']
       end
 
       # Set up networking.
       ip = "172.16.8.#{i+100}"
-      config.vm.customize ['modifyvm', :id, '--nictype1', 'virtio']
       config.vm.network :private_network, ip: ip, nic_type: "virtio"
 
       # Provision machine.
