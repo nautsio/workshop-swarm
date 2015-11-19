@@ -137,7 +137,7 @@ Nodes: 3
 ...
 ```
 
-!SUB
+!SLIDE
 # Challenge 1
 Define a staging and production environment. Use extended services to target an application to both of these environments. Make sure that the running application knows on which environment it is deployed.
 
@@ -164,11 +164,11 @@ Now deploy the app to both environments
 
 [see: extending services](https://docs.docker.com/compose/extends)
 
-!SUB
+!SLIDE
 # [ Challenge 2 ]
 Use an alternate backend for Swarm, for example Consul.
 
-!SUB
+!SLIDE
 # [ Challenge 3 ]
 Secure your Swarm Cluster
 
