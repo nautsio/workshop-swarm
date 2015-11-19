@@ -79,6 +79,14 @@ docker run -d -p <manager_port>:2375 swarm manage token://<cluster_id>
 docker -H tcp://<manager_ip:manager_port> info
 ```
 
+!SUB
+# Swarm list
+- List the nodes in your cluster
+
+```
+docker run --rm swarm list token://<cluster_id>
+```
+
 !SLIDE
 # Workshop Setup
 
