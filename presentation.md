@@ -190,3 +190,35 @@ Enable TLS on all Docker Daemons and your Swarm Manager
 ```
 docker run -d -p 2375:2375 -v /var/run/docker.sock:/var/run/docker.sock ehazlett/docker-proxy
 ```
+
+!SUB
+# Challenge 1: Step 1
+- Label your Docker Engine by editing the daemon parameters
+
+!SUB
+# Challenge 1: Step 2
+- Create a common.yaml
+
+```
+web:
+  image: ehazlett/docker-demo
+  ports:
+   - "8080"
+```
+
+!SUB
+# Challenge 1: Step 3
+- Create a staging/staging.yaml
+
+```
+web:
+  extends:
+    file: ../common.yml
+    service: web
+  environment:
+    - TITLE=STAGING
+    - "constraint:environment==staging"
+  labels:
+  - "com.example.description=Awesome webapp"
+  - "com.example.department=IT"
+```
