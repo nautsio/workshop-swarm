@@ -97,6 +97,7 @@ docker run --rm swarm list token://<cluster_id>
 # Workshop materials
 ```
 git clone https://github.com/nautsio/workshop-swarm
+cd workshop-swarm
 vagrant up
 ```
 will provide you a lab environment of 3 nodes which are Docker enabled
@@ -228,4 +229,3 @@ web:
 # Challenge 2
 - Consul daemon binds to the IP of eth1
 - Use the Consul HTTP API port to add and list the cluster nodes
-
