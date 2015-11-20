@@ -173,3 +173,19 @@ Use an alternate backend for Swarm, for example Consul.
 Secure your Swarm Cluster
 
 Enable TLS on all Docker Daemons and your Swarm Manager
+
+!SLIDE
+# Hints
+
+!SUB
+# Assignment
+- The Swarm manager needs to talk to the Docker daemon via TCP
+
+!SUB
+# Assignment
+- Two ways to get this done
+  - Edit the /etc/systemd/system/docker.service.d/docker.conf (don't forget to restart)
+  - Run a proxy to expose the unix socket via TCP
+```
+docker run -d -p 2375:2375 -v /var/run/docker.sock:/var/run/docker.sock ehazlett/docker-proxy
+```
