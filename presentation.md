@@ -184,8 +184,14 @@ Enable TLS on all Docker Daemons and your Swarm Manager
 !SUB
 # Assignment
 - Two ways to get this done
-  - Edit the /etc/systemd/system/docker.service.d/docker.conf (don't forget to restart)
+  - Edit the systemd file (don't forget to restart)
+
+```
+/etc/systemd/system/docker.service.d/docker.conf
+```
+
   - Run a proxy to expose the unix socket via TCP
+
 ```
 docker run -d -p 2375:2375 -v /var/run/docker.sock:/var/run/docker.sock ehazlett/docker-proxy
 ```
