@@ -222,3 +222,9 @@ web:
   - "com.example.description=Awesome webapp"
   - "com.example.department=IT"
 ```
+
+!SUB
+# Challenge 2
+- Consul daemon binds to the IP of eth1
+- Use the Consul HTTP API port to add and list the cluster nodes
+
