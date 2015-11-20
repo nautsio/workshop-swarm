@@ -96,6 +96,7 @@ docker run --rm swarm list token://<cluster_id>
 !SUB
 # Workshop materials
 ```
+git clone https://github.com/nautsio/workshop-swarm
 vagrant up
 ```
 will provide you a lab environment of 3 nodes which are Docker enabled
