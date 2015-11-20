@@ -34,10 +34,6 @@ redis:
   image: redis
 ```
 
-!SUB
-# Exercise
-- Create a docker-compose.yml to launch a nodejs container and a redis backend
-
 !SLIDE
 # What is Swarm
 - Native clustering for Docker
